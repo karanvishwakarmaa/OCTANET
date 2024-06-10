@@ -1,4 +1,6 @@
-Personal Landing Page
+**Personal Landing Page**
+
+
 Welcome to my personal landing page! This repository contains the code and resources for my personal website, where I showcase my portfolio, blog, and contact information.
 
 Table of Contents
@@ -36,7 +38,7 @@ Clone the repository:
 
 bash
 Copy code
-git clone https://github.com/yourusername/your-repo-name.git
+git clone https://github.com/karanvishwakarmaa/OCTANET.git
 cd your-repo-name
 Install dependencies:
 
@@ -84,7 +86,7 @@ This project is licensed under the MIT License. See the LICENSE file for details
 Contact
 If you have any questions or want to get in touch, feel free to reach out to me:
 
-Email: your-email@example.com
-LinkedIn: your-linkedin-profile
-Twitter: @your-twitter-handle
+Email: karanvishwakarma634@gmail.com
+LinkedIn: https://linkedin.com/in/karanvishwakarmaa/
+Twitter: https://x.com/royalkarann/
 Thank you for visiting my personal landing page repository!
