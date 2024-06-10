@@ -1,0 +1,422 @@
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  background-color: #111111;
+  color: #ffffff;
+}
+
+h1,h2,h3 {
+  color: #ff0000; /* Red headings */
+  text-align: center;
+}
+a {
+  color: #ff0000; /* Red links */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff6666; /* Light red on hover */
+}
+
+header {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#bg-video {
+  position: fixed;
+  /* top: 50%;
+  left: 50%; */
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  /* transform: translate(-50%, -50%); */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.header-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+header h1 {
+  font-size: 3em;
+  margin: 0;
+  animation: fadeInDown 2s ease;
+}
+
+header p {
+  font-size: 1.2em;
+  margin: 0;
+  animation: fadeInDown 2s ease 0.5s;
+}
+
+.resume-button, .cv-button {
+  display: inline-block;
+  margin: 1em;
+  padding: 0.5em 1em;
+  color: white;
+  background-color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.resume-button:hover, .cv-button:hover {
+  background-color: #555;
+}
+
+nav {
+  background-color: #333;
+  overflow: hidden;
+  animation: fadeIn 2s ease;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+section {
+  padding: 2em;
+  animation: fadeInUp 2s ease;
+}
+
+.project {
+  border: 1px solid #333333;
+  margin-bottom: 1em;
+  padding: 1em;
+  color: #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+  background-color: #222222;
+}
+
+
+.project h3 {
+  color: #ff0000; /* Red headings in projects section */
+}
+
+/* .projects a {
+  color: #ff6666; /* Red links in projects section */
+/* }  */
+
+.project a:hover {
+  color: #ff9999; /* Light red on hover in projects section */
+}
+
+.project:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.skills {
+  background-color: #fff;
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.skill-section {
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 10px;
+  /* background-color: #f9f9f9; */
+  background-color: #222222; /* Darker black section background */
+  color: #ffffff; /* White text for skill sections */
+  border: 1px solid #333333; /* Darker border for skill sections */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  animation: fadeInUp 2s ease;
+}
+
+.skill-section h3 {
+  margin-top: 0;
+  color: #ff0000;
+}
+
+.skill-section a {
+  color: #ff6666; /* Red links in skill sections */
+}
+
+.skill-section a:hover {
+  color: #ff9999; /* Light red on hover in skill sections */
+}
+
+.skill-section p {
+  color: #666;
+  line-height: 1.6;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+  padding: 2em;
+  border: 1px solid #333333;
+  color: #ffffff;
+  border-radius: 8px;
+  background-color: #222222;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+
+#contact-form h3 {
+  color: #ff0000; /* Red headings in projects section */
+}
+
+#contact-form a {
+  color: #ff6666; /* Red links in projects section */
+}
+
+#contact-form a:hover {
+  color: #ff9999; /* Light red on hover in projects section */
+}
+
+form label {
+  margin-bottom: 0.5em;
+  font-weight: bold;
+}
+
+form input, form textarea {
+  margin-bottom: 1em;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button {
+  padding: 0.7em;
+  border: none;
+  border-radius: 4px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #45a049;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+  animation: fadeInUp 2s ease;
+  text-decoration: none;
+}
+
+/* .span1{
+  color: rgba(97, 97, 164, 0.504);
+} */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Unique Animation */
+.unique-animation {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  background-color: #ffcc00;
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+  0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Wind animation */
+.wind {
+  position: fixed;
+  width: 100px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  animation: moveWind 3s infinite alternate;
+  z-index: 1;
+}
+
+@keyframes moveWind {
+  0% {
+      top: 20%;
+      left: -10%;
+      transform: rotate(-45deg);
+  }
+  100% {
+      top: 20%;
+      left: 110%;
+      transform: rotate(45deg);
+  }
+}
+
+/* Shadow effect */
+.shadow {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  animation: moveShadow 5s infinite alternate;
+  z-index: 0;
+}
+
+@keyframes moveShadow {
+  0% {
+      top: 60%;
+      left: 60%;
+      transform: scale(1);
+      opacity: 0.3;
+  }
+  100% {
+      top: 70%;
+      left: 70%;
+      transform: scale(2);
+      opacity: 0;
+  }
+}
+
+
+
+/* Header Text Styling */
+.header-content h1 {
+  font-size: 3em;
+  margin: 0;
+  animation: fadeInDown 2s ease;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+.header-content p {
+  font-size: 1.2em;
+  margin: 0;
+  animation: fadeInDown 2s ease 0.5s;
+  color: #fff;
+}
+
+/* Header Text Hover Animation */
+.header-content h1:hover,
+.header-content p:hover {
+  animation: shake 0.5s ease infinite;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+.animated-text {
+  animation: changeColor 5s infinite alternate;
+}
+
+@keyframes changeColor {
+  0% {
+      color: #ff0000; /* Red */
+  }
+  25% {
+      color: #00ff00; /* Green */
+  }
+  50% {
+      color: #0000ff; /* Blue */
+  }
+  75% {
+      color: #ff00ff; /* Purple */
+  }
+  100% {
+      color: #ffff00; /* Yellow */
+  }
+}
+
+
+.header-content h1 {
+  font-size: 3em;
+  margin: 0;
+  animation: fadeInDown 2s ease;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  margin-bottom: 20px; /* Gap between h1 and p */
+}
+
+.header-content p {
+  font-size: 1.2em;
+  margin: 0;
+  animation: fadeInDown 2s ease 0.5s;
+  color: #fff;
+  margin-top: 20px; /* Gap between p and next element */
+}
